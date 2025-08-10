@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Online Exam Portal - Home</title>
+<style>
+  body { font-family: Arial,sans-serif; background:#f7f7f7; margin:0; color:#333; padding:20px; }
+  header { background:#2c3e50; color:#fff; padding:20px; }
+  header h1 { margin:0; }
+  nav a {
+    color:#ecf0f1;
+    margin-right:15px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    text-decoration:underline;
+  }
+  main { max-width:600px; margin-top:20px; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+  h2 { color:#2c3e50; }
+  .btn {
+    background:#3498db;
+    color:#fff;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:4px;
+    margin-right:10px;
+    cursor:pointer;
+    display:inline-block;
+  }
+  .btn:hover { background:#2980b9; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Online Examination Portal</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="test.html">Test</a>
+    <a href="results.html">Results</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Welcome!</h2>
+  <p>Prepare and test your knowledge with our online exam system.</p>
+  <a href="login.html" class="btn">Login to Take Test</a>
+  <a href="register.html" class="btn">Register Now</a>
+</main>
+</body>
+</html>
+  
+<link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login - Online Exam Portal</title>
+<style>
+  body { font-family: Arial,sans-serif; background:#f7f7f7; margin:0; color:#333; padding:20px; }
+  header { background:#2c3e50; color:#fff; padding:20px; }
+  header h1 { margin:0; }
+  nav a {
+    color:#ecf0f1;
+    margin-right:15px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    text-decoration:underline;
+  }
+  main { max-width:600px; margin-top:20px; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+  h2 { color:#2c3e50; }
+  form label { display:block; margin-top:10px; margin-bottom:5px; }
+  input[type="text"], input[type="password"] {
+    width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top:20px;
+    padding:10px 15px;
+    background:#db3434;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:16px;
+  }
+  button:hover {
+    background:#b92929;
+  }
+  p { margin-top:15px; }
+  a.link {
+    color:#db3434; text-decoration:none;
+  }
+  a.link:hover { text-decoration:underline; }
+</style>
+</head>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label>Email or Username:</label>
+    <input type="text" id="loginUser" required />
+    <label>Password:</label>
+    <input type="password" id="loginPass" required />
+    <button type="submit">Login</button>
+  </form>
+  <p>Don’t have an account? <a href="register.html" class="link">Register here</a></p>
+</main>
+</body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Logged in successfully!');
+      window.location.href = 'test.html';
+    });
+  </script>
+  
+</html>
+<link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Register - Online Exam Portal</title>
+<style>
+  body { font-family: Arial,sans-serif; background:#f7f7f7; margin:0; color:#333; padding:20px; }
+  header { background:#2c3e50; color:#fff; padding:20px; }
+  header h1 { margin:0; }
+  nav a {
+    color:#ecf0f1;
+    margin-right:15px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    text-decoration:underline;
+  }
+  main { max-width:600px; margin-top:20px; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+  h2 { color:#2c3e50; }
+  form label { display:block; margin-top:10px; margin-bottom:5px; }
+  input[type="text"], input[type="email"], input[type="password"] {
+    width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top:20px;
+    padding:10px 15px;
+    background:#db3434;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:16px;
+  }
+  button:hover {
+    background:#b92929;
+  }
+  p { margin-top:15px; }
+  a.link {
+    color:#db3434; text-decoration:none;
+  }
+  a.link:hover { text-decoration:underline; }
+</style>
+</head>
+<link rel="stylesheet" href="style.css" />
+<main>
+  <h2>Register</h2>
+  <form id="registerForm">
+    <label>Full Name:</label>
+    <input type="text" id="regName" required />
+    <label>Email:</label>
+    <input type="email" id="regEmail" required />
+    <label>Username:</label>
+    <input type="text" id="regUser" required />
+    <label>Password:</label>
+    <input type="password" id="regPass" required />
+    <label>Confirm Password:</label>
+    <input type="password" id="regConfirmPass" required />
+    <button type="submit">Register</button>
+  </form>
+  <p>Already registered? <a href="login.html" class="link">Login here</a></p>
+</main>
+</body>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const pass = document.getElementById('regPass').value;
+      const confirmPass = document.getElementById('regConfirmPass').value;
+      if(pass !== confirmPass){
+        alert('Passwords do not match!');
+        return;
+      }
+      alert('Registered successfully!');
+      window.location.href = 'login.html';
+    });
+  </script>
+</html>
+<link rel="stylesheet" href="style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Test - Online Exam Portal</title>
+<style>
+  body { font-family: Arial,sans-serif; background:#f7f7f7; margin:0; color:#333; padding:20px; }
+  header { background:#2c3e50; color:#fff; padding:20px; }
+  header h1 { margin:0; }
+  nav a {
+    color:#ecf0f1;
+    margin-right:15px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    text-decoration:underline;
+  }
+  main { max-width:600px; margin-top:20px; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
+  h2 { color:#2c3e50; }
+  form p { margin-top:15px; margin-bottom:5px; font-weight: bold; }
+  label { display:block; margin-bottom:8px; }
+  input[type="radio"] { margin-right:8px; }
+  button {
+    margin-top:20px;
+    padding:10px 15px;
+    background:#db3434;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:16px;
+  }
+  button:hover {
+    background:#b92929;
+  }
+</style>
+<script>
+    document.getElementById('testForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      let score = 0;
+      if(document.querySelector('input[name="q1"]:checked')?.value === 'programming language') score++;
+      if(document.querySelector('input[name="q2"]:checked')?.value === 'Paris') score++;
+      if(document.querySelector('input[name="q3"]:checked')?.value === 'Mars') score++;
+      
+      // Store score for results page
+      localStorage.setItem('score', score);
+      window.location.href = 'results.html';
+    });
+  </script>
+</head>
+
+<main>
+  <h2>Online Test</h2>
+  <form id="testForm">
+    <p>1. What is html?</p>
+    <label><input type="radio" name="q1" value="programming language" required /> programming language</label>
+    <label><input type="radio" name="q1" value="website develpment" /> website develpment</label>
+    <label><input type="radio" name="q1" value="none of these" /> non of these</label>
+
+    <p>2. What is the capital of France?</p>
+    <label><input type="radio" name="q2" value="London" required /> London</label>
+    <label><input type="radio" name="q2" value="Paris" /> Paris</label>
+    <label><input type="radio" name="q2" value="Berlin" /> Berlin</label>
+
+    <p>3. Which planet is known as the Red Planet?</p>
+    <label><input type="radio" name="q3" value="Venus" required /> Venus</label>
+    <label><input type="radio" name="q3" value="Mars" /> Mars</label>
+    <label><input type="radio" name="q3" value="Jupiter" /> Jupiter</label>
+
+    <button type="submit">Submit Test</button>
+  </main>
+  <link rel="stylesheet" href="style.css" />
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Results - Online Exam Portal</title>
+</head>
+  <main>
+    <h2>Results</h2>
+    <p>Your test has been submitted successfully.</p>
+    <p><strong>Thank you for taking the test!</strong></p>
+    <a href="index.html" class="btn">Back to Home</a>
+  </main>
+</body>
+</html>
+
+
